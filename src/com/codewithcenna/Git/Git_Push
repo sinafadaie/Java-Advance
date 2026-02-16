@@ -1,0 +1,50 @@
+-------------------------
+initial git on folder
+
+git init
+-------------------------
+add all files in this folder to git:
+
+git add .
+-------------------------
+commit these new files
+and put message on this change
+
+git commit -m "first commit"(m stand for message)
+-------------------------
+add the repository address to git:
+origin is convention name for address of repository:
+
+git remote add origin https://github.com/username/project.git
+means after this named https://github.com/username/project.git as origin
+we can named it sina!
+--------------------------
+see results:
+
+git remote:
+return origin (the address of repository)
+git remote -v
+return address with details (v stand for verbose)
+--------------------------
+git branch -M main
+means named this branch to main
+mabe its main already, so nothing changed
+but mabe its named as master, its make it to main
+if there is another branch named main
+this command force this branch to replace it
+(before: branch name = master
+command: git branch -M main
+after:  branch name = main)
+
+git branch -m main
+do same thing
+but if there is other branch named main
+it dos not force it to replace
+we got error in this situation
+-----------------------------
+git push -u origin main
+
+-u stand for upstream-set
+Link my local branch main to the remote branch origin/main and make it the default.
+after this can simply write "git push"
+instead of "git push origin main" (push current branch to main branch in origin(remote))
