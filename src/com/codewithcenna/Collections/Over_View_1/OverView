@@ -1,0 +1,15 @@
+we have some interfaces and classes in collection **frame work**
+
+interfaces:
+Iterable (its not part of collection frame work, its part of the **java.lang package**)
+Collection (extend to Iterable)
+Queue (extend to Collection)
+Set (extend to Collection)
+List (extend to Collection)
+
+Classes:
+ArrayList (implement List interface)
+LinkedList (implement List interface)
+PriorityQueue (implement Queue interface)
+HashSet (implement Set interface)
+

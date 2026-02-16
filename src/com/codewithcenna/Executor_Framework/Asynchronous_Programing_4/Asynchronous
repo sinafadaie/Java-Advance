@@ -1,0 +1,20 @@
+in pre lesson, we saw future.get()
+was a blocking method (block main thread)
+main thread should be wait until the result is ready.
+----------
+although we use multiple thread,
+one of the thread is pending on another thread
+its bad! this is not the purpose of multi threading.
+----------
+if we had a mobile or desktop app
+and our main thread wait like this,
+its not able to respond to UI event like clicks,...
+our app is going to freeze!
+----------
+we should write code in a non-blocking way
+this way called Asynchronous programing.
+Asynchronous is fancy computer science term :)
+it just simply means non-blocking!
+-----------
+java introduce some tools in 2014
+to write code in synchronous way

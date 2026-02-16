@@ -1,0 +1,14 @@
+at the top of the exception hierarchy, we have the **throwable class**
+its define common characteristics for all exceptions and errors
+like stack trace and error massage (so all exceptions and error have stack trace and error massage)
+
+below throwable class
+we have
+1.Exception class (parent of checked and unchecked exception)
+2.Error Class (for external error)
+
+below Exception class
+we have
+RuntimeException
+if an exception derived from the runtime exception, its consider an unchecked exception
+otherwise, its a checked exception

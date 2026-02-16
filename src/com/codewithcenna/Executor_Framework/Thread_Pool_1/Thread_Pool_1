@@ -1,0 +1,43 @@
+Java introduce higher level abstractions that simplify building concurrent applications
+remember this concept don't handle concurrency problems!
+thread pool
+executors
+callable & future interfaces
+Asynchronous programing
+completable futures
+----------------------
+working directly with threads are error prone.
+two problem is usual
+1.Availability
+2.Cost
+
+Availability:
+we have limited number of threads available to us
+if we create too many threads, we get out of memory exception(app crashed)
+If you try to create 10,000 threads,
+and each thread has a 1 MB stack → 10,000 MB ≈ 10 GB.
+If the JVM cannot allocate this memory →
+java.lang.OutOfMemoryError: unable to create new native thread
+This means the OS or JVM cannot create a new thread,
+not that the ArrayList or other objects are full.
+
+Cost:
+creating and killing threads are costly
+if we have 1000 task to execute, but have 10 threads
+we have to create 10 thread, execute 10 task,
+kill the thread(explicitly)
+and create 10 new thread again ...
+its expensive!
+
+-----------------------
+java 5 introduce a concept to solve these
+Thread Pool
+Pool of thread that can be reused to several task
+they are not destroyed after task, always available
+when a thread complete a task,return to pool
+and assigned a new task
+
+because a thread pool have fix number of thread
+we are not worry about memory exception
+create a thread pool with 10 threads and submit 1000 task to it
+(if all threads will busy, tasks waiting in  a queue)

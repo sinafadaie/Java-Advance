@@ -1,0 +1,47 @@
+for thread safe code we have some strategies:
+1.Confinement
+2.Immutability
+3.Synchronization
+4.Atomic-objects
+5.partitioning
+
+Confinement:
+just simply don't share data across threads!
+restrict or confine each thread to its data
+
+Immutability:
+use immutable obj like string
+in this case threads just can read from these objects
+
+Synchronization:
+prevent multiple threads from accessing the same object concurrently.
+we synchronize or coordinate the access to an object across different threads
+we do that using "LOCKS"
+only one thread can execute that part of the code
+other threads have to wait!
+its create sequence inside a parallel!
+Synchronization is challenging and error prone!
+it can create dead locks (two thread wait for each other)
+dead locks cause our app be crash
+Synchronization is not good, avoid it as much as possible
+********everywhere see "synchronized", it means act like "Locking"***********
+
+Atomic-objects:
+Atomic classes like AtomicInteger
+allow us achieve thread safety without locks
+single operation never create issue!
+these class can handle multiple operation like single operation
+
+partitioning:
+partitioning data into segments that can be accessed concurrently.
+java provides a number of collection classes that support concurrency using partitioning.
+multiple threads can access a collection object simultaneously
+but only one thread at a time can access a segment in that collection.
+its like divide an object to smaller pieces!
+
+
+
+
+
+
+

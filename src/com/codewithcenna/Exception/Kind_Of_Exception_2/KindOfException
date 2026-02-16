@@ -1,0 +1,29 @@
+we have three type exception in java
+1.checked exception
+2.unchecked exception(run time exception)
+3.error
+
+1.checked exception:
+the exception, the developers should anticipate and handle properly.
+for example when you read from a file in java
+var reader = new FileReader("file.txt")
+you should handle that maybe there is not such a file,
+if you don't handle you have compile time error (unhandled exception )
+java compiler enforce to handle this error
+its called checked, because they get checked at compile time
+
+2.unchecked exception:
+they occur because of programing errors.
+NullPointerException is unchecked exception
+ArithmeticException when something divide by zero
+illegalArgumentException when the argument was not accepted
+indexOutOfBoundsException when use invalid index
+illegalStateException when call method but the underling object is not in the right state
+
+3.error
+it is not refer to our code or application
+its because of something external
+stack overflow error
+out of memory error
+
+

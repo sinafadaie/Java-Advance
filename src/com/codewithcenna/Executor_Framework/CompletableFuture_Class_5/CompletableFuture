@@ -1,0 +1,33 @@
+Class CompletableFuture <T>
+this class implement two interface:
+Future<T> Interface
+CompletionStage<T> Interface
+so every CompletableFuture is a kind of future
+-----------------------
+CompletionStage:
+A stage of possibly "asynchronous" computation.
+what it means:
+in real world, asynchronous operation involves many steps.
+we call an API to get some data(step 1)
+then transfer the result to another data structure (step 2)
+write that data to data base (step 3)
+
+this interface represent
+a stage of an asynchronous operation and gives us a bunch of
+methods to combining and composing these steps in a "declarative" way
+like we used declarative methods on streams.
+I think its create a pipeline for doing these steps
+and instead this multiple steps, we have a asynchronous pipeline
+--------------------------
+summary:
+so look at this class like a pipeline that have complex step inside,
+and this pipeline act asynchronous (don't block other thread),
+and its future type (the value can catch in future)
+--------------------------
+Singleton design pattern:
+A Singleton is a design pattern that ensures a class has only
+one instance during the lifetime of an application
+and provides a global access point to that instance.
+The instance is created once
+The same instance is reused everywhere.
+if you create new instance, its return that old instance

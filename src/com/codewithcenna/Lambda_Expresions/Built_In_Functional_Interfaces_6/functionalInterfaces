@@ -1,0 +1,18 @@
+we have many functional interfaces in java.
+its in java.util.function package.
+
+they divide in 4 types:
+1.consumers
+2.supplier
+3.function
+4.predicate
+
+consumer:a operation that get a single argument and returns no result.(its consume a value)
+         like printer interface we were created.
+
+supplier:a operation that takes no input and returns a value;
+
+function:a function that can map a value to a different value
+
+predicate:a operation that take a object and checks to see if that
+          object satisfies some criteria.(its use for filtering data)

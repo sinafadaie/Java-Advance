@@ -1,0 +1,25 @@
+  in all pre examples, threads have been isolated from each other.
+  but in many cases, our threads may modify shared resources
+  when multiple threads access to a same object, we have issues!
+  imagine we have an object that report all bytes we downloaded.
+  ------------------
+  concurrency problem:
+  1.race condition
+  2.visibility problem
+
+  race condition:
+  when multiple threads wants modify same object at same time
+  its like they have race with each other
+
+  visibility problem:
+  one thread change the shared data,
+  but the changes are not visible to other threads
+  different threads have different view of tha data!
+
+  -----------------
+  if threads just read shared data, we are fine.
+  but if at least one of them
+  can modify data we have issues.(visibility problem).
+
+  Thread-Safe code:
+  code that can be safely executed by many threads in parallel

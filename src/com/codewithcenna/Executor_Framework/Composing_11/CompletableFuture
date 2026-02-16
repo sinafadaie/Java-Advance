@@ -1,0 +1,27 @@
+when we create a CompletableFuture
+we can act it like a stream of CompletableFuture object
+(transfer CompletableFuture object through this stream)
+with this concept,we can build recipe for our asynchronous operations
+
+we can consume the inside value by thenAccept
+(the stream continue, its return old CompletableFuture object)
+it means the CompletableFuture object is  accessible after "thenAccept"
+-----------------------------
+we can just do something among this stream
+by thenRun
+(the stream continue, its return old CompletableFuture object)
+it means the CompletableFuture object is  accessible after "thenRun"
+-----------------------------
+we can convert or manipulate the CompletableFuture object
+by "thenApply"
+(the stream continue with new CompletableFuture object )
+-----------------------------
+we can just replace our CompletableFuture object to
+a new CompletableFuture object by "thenCompose"
+It's useful for start a depended task upon completion another task
+(we need the result of pre task, in thenRun we don't need the result)
+(like we want find playlist by customerId,we should find email first)
+(the stream continue with new CompletableFuture object )
+
+
+
